@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kadus Engineering & Services Company Ltd</title>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="output.css" />
+
+    <!-- Google fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="img/kadus-favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Fontawesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/ad0d56fe3e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Internal CSS -->
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+
+      .menuItem {
+        display: block;
+        margin: 2rem 4rem;
+        font-size: 1.3rem;
+        --tw-text-opacity: 1;
+        color: rgb(30 64 175 / var(--tw-text-opacity));
+        text-decoration: none;
+      }
+
+      .menuItem:hover {
+        --tw-text-opacity: 1;
+        color: rgb(239 68 68 / var(--tw-text-opacity));
+        font-size: 1.4rem;
+      }
+
+      .hamburger {
+        position: absolute;
+        z-index: 100;
+        top: 1.7rem;
+        right: 1rem;
+        padding: 4px;
+        border: 1px;
+        cursor: pointer;
+      }
+
+      .menuIcon {
+        margin-top: 0.7rem;
+      }
+
+      .closeIcon {
+        display: none;
+      }
+
+      .menu {
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        --tw-bg-opacity: 1;
+        background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+        color: white;
+        list-style: none;
+        padding-top: 4rem;
+        text-align: center;
+      }
+
+      .showMenu {
+        transform: translateY(0);
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        text-align: center;
+        padding: 0.5rem;
+      }
+
+      tr:nth-child(even) {
+        background-color: rgb(184, 184, 212);
+      }
+
+      #scrollBackToTopBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        --tw-text-opacity: 1;
+        background-color: rgb(108, 121, 177); /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 10px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+      }
+
+      #scrollBackToTopBtn:hover {
+        background-color: rgb(
+          169,
+          173,
+          190
+        ); /* Add a dark-grey background on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Scroll Back to Top Button -->
+    <button onclick="topFunction()" id="scrollBackToTopBtn" title="Go to top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </button>
+
+    <!--Navbar Section-->
+    <section id="home">
+      <div class="text-blue-800 mb-10">
+        <div>
+          <nav
+            class="flex bg-white justify-between px-8 md:px-16 lg:px-24 py-5"
+          >
+            <div>
+              <a href="#"
+                ><h1
+                  style="font-family: 'Bebas Neue', cursive"
+                  class="text-5xl"
+                >
+                  kadus
+                </h1>
+                <p class="uppercase text-sm w-1/2 text-red-700">engineering</p>
+              </a>
+            </div>
+            <div class="block lg:hidden">
+              <ul class="menu">
+                <li><a class="menuItem" href="#home">Home</a></li>
+                <li><a class="menuItem" href="#services">Services</a></li>
+                <li><a class="menuItem" href="#projects">Projects</a></li>
+                <li><a class="menuItem" href="#contact">Contact</a></li>
+              </ul>
+              <button class="hamburger">
+                <i class="fa-solid fa-bars fa-lg menuIcon"></i>
+                <i
+                  class="fa-solid fa-xmark fa-lg text-red-500 mt-2 closeIcon"
+                ></i>
+              </button>
+            </div>
+            <div class="lg:flex items-center hidden">
+              <a href="#home" class="px-5 hover:text-lg">Home</a>
+              <a href="#services" class="px-5 hover:text-lg">Services</a>
+              <a href="#projects" class="px-5 hover:text-lg">Projects</a>
+              <a href="#contact" class="px-5 hover:text-lg">Contact</a>
+            </div>
+          </nav>
+        </div>
+        <div class="block lg:flex py-8 px-12 md:p-16 lg:p-24 mx-auto">
+          <div class="w-full lg:w-3/4 text-center md:text-left mb-14">
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl lg:w-9/12 font-bold mb-8"
+            >
+              We are committed to providing the best engineering and delivery
+              services for our clients.
+            </h2>
+            <a href="#contact"
+              ><button
+                class="bg-gradient-to-r from-red-600 via-rose-500 to-blue-500 hover:bg-gradient-to-r hover:from-blue-500 hover:via-rose-500 hover:to-red-600 p-4 text-white font-semibold rounded-lg hover:bg-"
+              >
+                Get in touch
+              </button></a
+            >
+          </div>
+          <div class="w-9/12 md:w-1/2 mx-auto lg:w-1/4 px-0 lg:mr-24">
+            <img
+              style="border-radius: 100%"
+              class="h-64 w-80"
+              src="img/building-img.jpg"
+              alt="A picture of workers on site"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="px-12 md:px-16 lg:px-24 mb-20">
+        <h2
+          class="text-3xl md:text-4xl text-blue-800 md:text-center font-semibold mb-6"
+        >
+          Our Services
+        </h2>
+        <p
+          class="text-lg md:text-xl leading-relaxed md:leading-loose md:text-center mb-6"
+        >
+          Since our inception we have achieved a spring of notable jobs to our
+          name. Our extensive national outlook as an up coming organization with
+          a vision to excel, we are poised to render world-class services that
+          will take care of all your needs.
+        </p>
+        <div
+          class="flex flex-col md:flex-row items-center md:justify-around text-blue-700"
+        >
+          <div class="mr-8 mb-14 md:mb-0">
+            <!-- Engineering icon -->
+            <div class="ml-2">
+              <img
+                src="https://img.icons8.com/dotty/80/000000/engineering.png"
+                alt="Engineering icon"
+              />
+            </div>
+            <h3 class="text-lg mt-4">Engineering</h3>
+          </div>
+          <div class="mr-8 mb-14 md:mb-0">
+            <!-- Construction icon -->
+            <div class="ml-4">
+              <img
+                src="https://img.icons8.com/external-kosonicon-outline-kosonicon/64/000000/external-construction-insurance-kosonicon-outline-kosonicon.png"
+                alt="Construction icon"
+              />
+            </div>
+
+            <h3 class="text-lg mt-4">Construction</h3>
+          </div>
+          <div class="mr-8 mb-14 md:mb-0">
+            <!-- Contract icon -->
+            <div class="ml-10">
+              <img
+                src="https://img.icons8.com/external-outline-juicy-fish/60/000000/external-contract-banking-outline-outline-juicy-fish.png"
+                alt="Contract icon"
+              />
+            </div>
+            <h3 class="text-lg mt-4 mr-2">General Contracts</h3>
+          </div>
+          <div class="mr-8 mb-14 md:mb-0">
+            <!-- Leasing icon -->
+            <div class="ml-10 mb-6">
+              <img
+                src="https://img.icons8.com/ios/50/000000/key-exchange.png"
+                alt="Leasing icon"
+              />
+            </div>
+            <h3 class="text-lg mt-4 mr-2">Equipment Leasing</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="md:px-24 mb-16">
+        <h2
+          class="text-3xl md:text-4xl text-blue-800 pl-12 md:text-center font-semibold mb-6"
+        >
+          Our Projects
+        </h2>
+        <div>
+          <div
+            class="flex flex-col justify-evenly rounded-lg p-2 leading-normal"
+          >
+            <div style="overflow-x: auto">
+              <table>
+                <tr class="text-sm md:text-xl">
+                  <th>PROJECT NAME</th>
+                  <th>CLIENT</th>
+                  <th>PERIOD</th>
+                  <th>SCOPE OF WORK</th>
+                  <th>STATUS</th>
+                </tr>
+                <tr class="text-sm md:text-lg">
+                  <td>Khasu Hostel Choba, Port Hacourt</td>
+                  <td>Khasu Properties</td>
+                  <td>2019</td>
+                  <td>Building</td>
+                  <td>
+                    <i class="fa-solid fa-circle fa-2xs text-yellow-200"></i>
+                    Bidded
+                  </td>
+                </tr>
+                <tr class="text-sm md:text-lg">
+                  <td>Gas Plant / Station</td>
+                  <td>Sasu Oil</td>
+                  <td>2019</td>
+                  <td>Civil / Electrical Installations</td>
+                  <td>
+                    <i class="fa-solid fa-circle fa-2xs text-orange-400"></i>
+                    On-going
+                  </td>
+                </tr>
+                <tr class="text-sm md:text-lg">
+                  <td>Quad & Double Joint Civil Work</td>
+                  <td>Mutadam Engineering</td>
+                  <td>2019</td>
+                  <td>Installation of the Shelter</td>
+                  <td>
+                    <i class="fa-solid fa-circle fa-2xs text-yellow-200"></i>
+                    Bidded
+                  </td>
+                </tr>
+                <tr class="text-sm md:text-lg">
+                  <td>Admin. Building</td>
+                  <td>Sasu Oil</td>
+                  <td>2019</td>
+                  <td>Civil / Electrical</td>
+                  <td>
+                    <i class="fa-solid fa-circle fa-2xs text-orange-400"></i>
+                    On-going
+                  </td>
+                </tr>
+                <tr class="text-sm md:text-lg">
+                  <td>
+                    Land Relamation Clearing & Degrubbing At Ologoghe, Bayelsa
+                    State
+                  </td>
+                  <td>Steriod Nig. Ltd. Bayelsa State</td>
+                  <td>2019</td>
+                  <td>2019</td>
+                  <td>
+                    <i class="fa-solid fa-circle fa-2xs text-green-500"></i>
+                    Completed
+                  </td>
+                </tr>
+                <tr class="text-sm md:text-lg">
+                  <td>
+                    Renovation of 3NOS 5 Bedroom Bungalow With Boys Quarters
+                  </td>
+                  <td>Duncan Investment Ltd.</td>
+                  <td>2019</td>
+                  <td>Main Contractor</td>
+                  <td>
+                    <i class="fa-solid fa-circle fa-2xs text-green-500"></i>
+                    Completed
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- <h5>
+              <span class="text-blue-700"> PROJECT NAME:</span> Khasu Hostel
+              Choba, Port Hacourt
+            </h5>
+            <h5>
+              <span class="text-blue-700"> CLIENT:</span> Khasu Properties
+            </h5>
+            <h5><span class="text-blue-700"> SCOPE OF WORK:</span> Building</h5>
+            <p><span class="text-blue-700"> Status:</span> Bidding</p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div
+        class="px-24 pt-8 pb-2 flex flex-col justify-center items-center bg-blue-200"
+      >
+        <h2 class="text-4xl text-blue-800 md:text-center font-semibold mb-6">
+          Contact Us
+        </h2>
+        <div class="text-left">
+          <div class="flex mb-3">
+            <i class="fa-solid fa-location-dot fa-lg mt-3 mr-2"></i>
+            <p class="text-base md:text-lg">
+              # 37 Olu Obasanjo Road, Port Harcourt, Rivers State. <br />
+              # 53 Gaborone Street, Wuse Zone 2, Abuja, Nigeria.
+            </p>
+          </div>
+          <div class="flex mb-3">
+            <i class="fa-solid fa-square-phone fa-lg mt-3 mr-2"></i>
+            <p class="text-base md:text-lg">0813 955 8167, 08107340220</p>
+          </div>
+          <div class="flex">
+            <i class="fa-solid fa-envelope fa-lg mt-2 pt-1 mr-2"></i>
+            <p class="text-base md:text-lg">kadusengineering@gmail.com</p>
+          </div>
+          <hr class="w-full border-gray-400 my-6" />
+          <p class="text-gray-700 text-base text-center md:text-lg">
+            &copy; 2022 Kadus Engineering and Services Company Ltd.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
